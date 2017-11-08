@@ -24,13 +24,14 @@
             lambda1 (* lng1 radians-per-degree)
             phi2 (* lat2 radians-per-degree)
             lambda2 (* lng2 radians-per-degree)]
-        (* 2 earth-radius
-          (Math/asin 
-            (Math/sqrt
-              (+ (haversine (- phi2 phi1))
-                 (* (Math/cos phi1)
-                    (Math/cos phi2)
-                    (haversine (- lambda2 lambda1)))))))))))
+        (sc.api/spy
+          (* 2 earth-radius
+             (Math/asin
+               (Math/sqrt
+                 (+ (haversine (- phi2 phi1))
+                    (* (Math/cos phi1)
+                       (Math/cos phi2)
+                       (haversine (- lambda2 lambda1))))))))))))
 
 (def Paris [48.8566 2.3522])
 (def New-York [40.7134 -74.0055])
