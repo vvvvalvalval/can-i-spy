@@ -1,5 +1,5 @@
 (ns can-i-spy.core
-    (:require sc.api))
+    (:require [sc.api :include-macros true]))
 
 (enable-console-print!)
 
